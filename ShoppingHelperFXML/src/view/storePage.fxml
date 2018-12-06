@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import controllers.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="goAnchorPane" fx:id="storeAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.storeController">
+  <children>
+    <BorderPane id="goBorderPane" fx:id="storeBorderPane" layoutX="0.0" layoutY="0.0" prefHeight="440.0" prefWidth="550.0">
+      <bottom>
+        <HBox fx:id="goBottomHBox" alignment="CENTER" prefHeight="65.0" prefWidth="550.0" spacing="300.0">
+          <children>
+            <Button id="backButton" fx:id="closeButton" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#close" text="Close" HBox.hgrow="SOMETIMES" />
+            <Button fx:id="helpButton" alignment="BOTTOM_CENTER" cancelButton="false" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#help" text="Help" HBox.hgrow="SOMETIMES" />
+          </children>
+          <padding>
+            <Insets />
+          </padding>
+        </HBox>
+      </bottom>
+      <center>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+          <children>
+            <AnchorPane fx:id="storeSplitPaneTopPane" minHeight="0.0" minWidth="0.0" prefHeight="33.84375" prefWidth="550.0">
+              <children>
+                <Text layoutX="239.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Store View" />
+              </children>
+            </AnchorPane>
+            <AnchorPane fx:id="storeSplitPaneBottomPane" minHeight="0.0" minWidth="0.0" prefHeight="276.0" prefWidth="548.0">
+              <children>
+                <HBox fx:id="bottomPaneHBox" alignment="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="269.0" prefWidth="548.0" spacing="126.0">
+                  <children>
+                    <Rectangle id="aisleOne" fx:id="shelvesLeft" arcHeight="5.0" arcWidth="5.0" height="200.0" smooth="true" stroke="BLACK" strokeType="INSIDE" width="57.0" HBox.hgrow="SOMETIMES">
+                      <fill>
+                        <Color blue="0.750" green="0.750" red="0.750" fx:id="x1" />
+                      </fill>
+                    </Rectangle>
+                    <Rectangle id="aisleTwo" fx:id="shelvesCenter" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
+                    <Rectangle id="aisleThree" fx:id="shelvesRight" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="200.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
+                  </children>
+                </HBox>
+                <GridPane fx:id="bottomPaneGridPane" alignment="CENTER_RIGHT" layoutX="0.0" layoutY="0.0" prefHeight="280.0" prefWidth="548.0">
+                  <children>
+                    <Circle fx:id="aisleOneCircle" fill="#a1ff99" radius="25.0" stroke="BLACK" strokeType="INSIDE" visible="true" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <Circle fx:id="aisleTwoCircle" radius="25.0" stroke="BLACK" strokeType="INSIDE" visible="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <fill>
+                        <Color blue="0.600" green="1.000" red="0.631" fx:id="x2" />
+                      </fill>
+                    </Circle>
+                    <Circle fx:id="aisleThreeCircle" fill="$x2" radius="25.0" stroke="BLACK" strokeType="INSIDE" visible="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                    <Circle fx:id="aisleFourCircle" fill="$x2" radius="25.0" stroke="BLACK" strokeType="INSIDE" visible="true" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                    <Circle fx:id="aisleFiveCircle" fill="$x2" radius="25.0" stroke="BLACK" strokeType="INSIDE" visible="true" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                    <Circle fx:id="aisleSixCircle" fill="$x2" radius="25.0" stroke="BLACK" strokeType="INSIDE" visible="true" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                    <Text fx:id="aisleOneText" strokeType="OUTSIDE" strokeWidth="0.0" text="1" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <Text fx:id="aisleTwoText" strokeType="OUTSIDE" strokeWidth="0.0" text="2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    <Text fx:id="aisleThreeText" strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                    <Text fx:id="aisleFourText" strokeType="OUTSIDE" strokeWidth="0.0" text="4" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                    <Text fx:id="aisleFiveText" strokeType="OUTSIDE" strokeWidth="0.0" text="5" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                    <Text fx:id="aisleSixText" strokeType="OUTSIDE" strokeWidth="0.0" text="6" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+              </children>
+            </AnchorPane>
+          </children>
+        </VBox>
+      </center>
+      <top>
+        <VBox id="goTopVBox" fx:id="storeTopVBox" alignment="TOP_CENTER" fillWidth="true" minHeight="47.0" prefHeight="47.0" prefWidth="326.0">
+          <children>
+            <Text id="titleText" strokeType="OUTSIDE" strokeWidth="0.0" text="Shopping Helper">
+              <font>
+                <Font name="Arial Black" size="24.0" />
+              </font>
+            </Text>
+          </children>
+          <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+          </padding>
+        </VBox>
+      </top>
+    </BorderPane>
+  </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import controllers.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.mainController">
+  <children>
+    <BorderPane fx:id="mainBorderPane" layoutX="112.0" layoutY="14.0" prefHeight="412.0" prefWidth="326.0">
+      <center>
+        <VBox fx:id="mainCenterVBox" alignment="CENTER" fillWidth="false" prefHeight="322.0" prefWidth="312.0" BorderPane.alignment="CENTER">
+          <children>
+            <ComboBox fx:id="selectStoreComboBox" onAction="#selectStore" prefWidth="179.0" promptText="Please Select Store...">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+              <VBox.margin>
+                <Insets top="10.0" />
+              </VBox.margin>
+            </ComboBox>
+            <Button fx:id="viewInventoryButton" mnemonicParsing="false" onAction="#viewInventory" prefWidth="179.0" text="View Inventory...">
+              <VBox.margin>
+                <Insets top="15.0" />
+              </VBox.margin>
+            </Button>
+            <Button fx:id="importListButton" mnemonicParsing="false" onAction="#importList" prefWidth="179.0" text="Import List...">
+              <VBox.margin>
+                <Insets top="15.0" />
+              </VBox.margin>
+            </Button>
+            <Button fx:id="createListButton" mnemonicParsing="false" onAction="#createList" prefWidth="179.0" text="Create List...">
+              <VBox.margin>
+                <Insets top="15.0" />
+              </VBox.margin>
+            </Button>
+            <Button fx:id="goButton" mnemonicParsing="false" onAction="#go" prefWidth="179.0" text="Go...">
+              <VBox.margin>
+                <Insets top="15.0" />
+              </VBox.margin>
+            </Button>
+          </children>
+        </VBox>
+      </center>
+      <top>
+        <VBox fx:id="mainTopVBox" alignment="TOP_CENTER" fillWidth="true" minHeight="47.0" prefHeight="47.0" prefWidth="326.0" BorderPane.alignment="CENTER">
+          <children>
+            <Text id="titleText" fx:id="shoppingHelperTextBox" strokeType="OUTSIDE" strokeWidth="0.0" text="Shopping Helper">
+              <font>
+                <Font name="Arial Black" size="24.0" />
+              </font>
+            </Text>
+          </children>
+          <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+          </padding>
+        </VBox>
+      </top>
+    </BorderPane>
+  </children>
+</AnchorPane>
